@@ -36,4 +36,35 @@ $(document).ready(function() {
     }
 
     animateMessage();
+
+    // Contrôler la lecture audio
+    const audioElement = document.getElementById('background-music');
+
+    // Lire la musique
+    function playMusic() {
+        audioElement.play();
+    }
+
+    // Mettre en pause la musique
+    function pauseMusic() {
+        audioElement.pause();
+    }
+
+    // Arrêter la musique
+    function stopMusic() {
+        audioElement.pause();
+        audioElement.currentTime = 0;
+    }
+
+    // Volume de la musique (0 à 1)
+    function setVolume(volume) {
+        audioElement.volume = volume;
+    }
+
+    // Exemple d'utilisation : joue la musique lorsque la page est chargée
+    playMusic();
+
+    // Exemple d'utilisation : Arrêter la musique après 10 secondes
+    //setTimeout(stopMusic, 10000);
+
 });
